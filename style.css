@@ -1,0 +1,373 @@
+body{
+	background-color: #e5e5e5;
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Roboto';
+	color : #727272;
+	font-weight: normal;
+}
+
+/*--------------- Splash Screen ---------------*/
+
+#banner.splashScreen{
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+	height: 100% !important;
+	margin: 0 !important;
+}
+.profilePic.splashScreen{
+	height: 200px;
+	width: 200px;
+	border-radius: 256px;
+	border: 8px solid white;
+	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.3);
+}
+.profilePic.top{
+	top: 170px !important;
+}
+paper-fab.splashScreen,
+.card.splashScreen{
+	display: none;
+}
+.splashPresentation{
+	z-index: 999;
+	margin-top: 200px;
+	display: none;
+	color: #dddddd;
+	line-height: 80%;
+	text-align: center;
+	text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+}
+.splashPresentation>h2{
+	font-size: 1.2rem;
+}
+.splashPresentation.splashScreen{
+	display: block;
+}
+
+/*------------------------------------------*/
+
+#banner{
+	position: absolute;
+	background-color: #2196F3;
+	background-image: url(img/wall1.jpg);
+	background-position: right bottom;
+	margin: 0;
+	padding : 0;
+	width: 100%;
+	height: 300px;
+	top:0;
+	z-index: 998;
+	transition: height 0.5s;
+}
+.profilePic{
+	height: 100px;
+	width: 100px;
+	border-radius: 100px;
+	background-image: url(img/me.jpeg);
+	background-size: 100% 100%;
+	border: 5px solid white;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	transition: all 0.5s;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -250px;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 1000;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.card{
+	background-color: #FFFFFF;
+	width: 70%;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom : 30px;
+	padding : 15px;
+	padding-top: 15px;
+	text-align: justify;
+	border-radius: 2px;
+	font-size: 0.9rem;
+	transition: width 0.25s;
+}
+.card h2{
+	margin-top: 0px;
+	font-family: Roboto Condensed;
+	font-weight: normal;
+	font-size: 2rem;
+	color: #212121 ;
+}
+header{
+	position: absolute;
+	top: 230px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	z-index: 999;
+}
+header h1{
+	margin: 0;
+	margin-bottom: 3px;
+	font-size: 2rem;
+	font-family: Roboto Condensed;
+	font-weight: normal;
+	color: #212121;
+}
+header #studyLocation{
+	font-size: 0.8rem;
+	margin-bottom: 3px;
+}
+#headerflex{
+	display: flex;
+	flex-direction: column;
+}
+.icons{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin: 0;
+}
+.iconsline{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	min-width: 50%;
+}
+#competences{
+	background: none;
+	box-shadow: none;
+}
+#socialnetwork{
+	background: none;
+	box-shadow: none;
+}
+#socialnetwork a{
+	text-decoration: none;
+	color: inherit;
+	border: none;
+	display: block;
+}
+.compIcon{
+	width: 150px;
+	height: auto;
+	background: #FFFFFF;
+	padding-bottom: 8px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	margin: 5px;
+	border-radius: 2px;
+	overflow: hidden;
+	transition: box-shadow 0.25s, width 0.75s, height 0.75s;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.compIcon:hover{
+	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+}
+.compIcon>paper-ripple{
+	position: absolute;
+	z-index: 800;
+	color: #212121;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.compIcon>h3{
+	margin-top : 5px;
+	margin-left: 10px;
+	margin-bottom: 5px;
+	color: #212121;
+	font-family: Roboto Condensed;
+	font-weight: normal;
+	position: relative;
+}
+.compIcon>img{
+	max-width: 100%;
+	height: auto;
+	position: relative;
+	top: 0;
+	transition: height 0.5s, width 0.5s;
+}
+
+/*--------- Competences Description -------------*/
+
+.chip-top-exp{
+	position: absolute !important;
+	width: 256px !important;
+	height: 256px !important;
+	z-index: 9999 !important;
+}
+
+/*-----------------------------------------------*/
+
+paper-fab{
+	position: absolute;
+	right: 5%;
+	top: 272px;
+	transition: all .25s ease-in;
+	z-index: 999;
+}
+
+/*--------- timeline ---------*/
+
+.timeline{
+	list-style: none;
+	margin: 0 0 0 170px;
+	padding-left: 30px;
+}
+
+.work{
+	margin: 40px 0;
+	position: relative;
+}
+
+.work:first-child{
+	margin-top: 0;
+}
+
+.work:last-child{
+	margin-bottom: 0;
+}
+
+.work p{
+	margin : 0 0 15px;
+}
+
+.tl-date{
+	margin-top: -18px;
+	top: 50%;
+	left: -180px;
+	font-size: 0.95rem;
+	line-height: 20px;
+	position: absolute;
+	font-weight: bold;
+}
+.tl-nom-min{
+	margin-top: 0px;
+	top: 50%;
+	left: -180px;
+	font-size: 0.95rem;
+	line-height: 20px;
+	position: absolute;
+	font-style: italic;
+}
+.tl-nom{
+	font-weight: bold;
+}
+.tl-lieu{
+	font-style: italic;
+}
+.tl-circle{
+	margin-top: -10px;
+	top: 50%;
+	left: -43px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	display: block;
+	position: absolute;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+}
+
+.tl-content ul{
+	list-style: disc;
+	margin-top: -10px;
+}
+
+.tl-std{
+	border-left : 8px solid #BBDEFB;
+}
+.tl-std .tl-circle{
+	background: #1976D2;
+	border: 5px solid #1976D2;
+}
+.tl-exp{
+	border-left : 8px solid #C8E6C9;
+}
+.tl-exp .tl-circle{
+	background: #388E3C;
+	border: 5px solid #388E3C;
+}
+
+/*------------- A propos ------------*/
+
+.apropos>h2{
+	margin-bottom: 8px;
+}
+.apropos>h3{
+	margin: 0;
+	margin-left: 15px;
+}
+.apropos>p{
+	margin-left: 25px;
+	margin-right: 25px;
+	margin-top: 5px; 
+}
+.apropos a{
+	color: #1976D2;
+	text-decoration: none;
+}
+.apropos a:hover {
+	color: #2196F3;
+	text-decoration: none;
+}
+
+/*------------- Responsiveness ----------------*/
+
+
+@media (max-width: 1300px){
+	.icons{
+		flex-wrap: wrap;
+	}
+}
+@media (max-width: 850px) {
+	.card {
+		width: 90%;
+	}
+	paper-fab{
+		right: 50px;
+		top: 202px;
+		position: absolute;
+	}
+	.profilePic.top{
+		top: 70px !important;
+	}
+	.timeline{
+		margin: 0 0 0 106px;
+		padding-left: 14px;
+	}
+	.tl-date,.tl-nom-min{
+		left: -126px;
+	}
+	.tl-circle{
+		left: -27px;
+	}
+	.apropos>h3{
+		margin-left: 5px;
+	}
+	.apropos>p{
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+}
+@media (max-width: 600px){
+	.compIcon>h3{
+		font-size: 3vw;
+	}
+}
