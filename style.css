@@ -215,7 +215,13 @@ header #studyLocation{
 	transition: all .25s ease-in;
 	z-index: 999;
 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 18px;
+
 	background-color: #d23f31;
+	color: #ffffff;
 	border-radius: 50%;
 
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
