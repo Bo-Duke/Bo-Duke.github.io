@@ -58,6 +58,7 @@ body{
 
 .arrow {
   width: 40px;
+  cursor: pointer;
   height: 40px;
   top: 90%;
   margin: -20px 0 0 -20px;

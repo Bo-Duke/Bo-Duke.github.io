@@ -16,9 +16,8 @@ $(window).load(function(){
 	var age = Math.floor((today-dob) / (365.25 * 24 * 60 * 60 * 1000));
 	$('#age').html(age);
 
-	$(window).scroll(function() {
-		if (isSplashed) {
-			$('#banner').toggleClass('splashScreen');
+	function splashScreenToggle () {
+		$('#banner').toggleClass('splashScreen');
 			$('.profilePic').toggleClass('splashScreen');
 			$('.profilePic').toggleClass('top');
 			$('.card').toggleClass('splashScreen');
@@ -26,16 +25,18 @@ $(window).load(function(){
 			$('.splashPresentation').toggleClass('splashScreen');
 			$('.arrow').toggleClass('splashScreen');
 			isSplashed = !isSplashed;
+	}
+
+	$(window).scroll(function() {
+		if (isSplashed) {
+			splashScreenToggle();
 		};
 	});
 	$('.profilePic').click(function(){
 		window.scrollTo(0, 0);
-		$('#banner').toggleClass('splashScreen');
-		$('.profilePic').toggleClass('splashScreen');
-		$('.profilePic').toggleClass('top');
-		$('.card').toggleClass('splashScreen');
-		$('.mailicon').toggleClass('splashScreen');
-		$('.splashPresentation').toggleClass('splashScreen');
-		isSplashed = !isSplashed;
+		splashScreenToggle();
+	});
+	$('.arrow').click(function(){
+		splashScreenToggle();
 	});
 });
