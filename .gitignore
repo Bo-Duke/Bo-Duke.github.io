@@ -1,5 +1,9 @@
 # Created by https://www.gitignore.io/api/osx
 
+# Sublime text
+.sublime-project
+.sublime-workspace
+
 ### OSX ###
 .DS_Store
 .AppleDouble
