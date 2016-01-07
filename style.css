@@ -101,6 +101,7 @@ body{
 	background-color: #2196F3;
 	background-image: url(img/wall1.jpg);
 	background-position: right bottom;
+	background-size: cover;
 	margin: 0;
 	padding : 0;
 	width: 100%;
