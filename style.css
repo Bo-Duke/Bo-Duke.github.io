@@ -180,6 +180,13 @@ header #studyLocation{
 	display: flex;
 	flex-direction: column;
 }
+#mainContent {
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+}
 .icons{
 	display: flex;
 	flex-direction: row;
