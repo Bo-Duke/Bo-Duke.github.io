@@ -2,41 +2,46 @@
  *
  */
 
-$(window).load(function(){
-	var height = $('header').height()+280;
+window.onload = function(){
+    sectionMargin = function() {
+        var height = document.querySelector('header').clientHeight+280;
+        document.querySelector('section').style.marginTop = height+'px';
+    };
 	var isSplashed = true;
-	$('.profilePic.splashScreen').css({'top':($(window).height()/2)-200});
-	$('section').css({'margin-top':height});
-	$(window).resize(function(){
-		var height = $('header').height()+280;
-		$('section').css({'margin-top':height});
-	});
-	var dob = new Date(1996,4,19);
+	document.querySelector('.profilePic.splashScreen').style.top = (window.innerHeight/2)-200+'px';
+	window.onresize = sectionMargin();
+
+    // age
+    var dob = new Date(1996,4,19);
 	var today = new Date();
 	var age = Math.floor((today-dob) / (365.25 * 24 * 60 * 60 * 1000));
-	$('#age').html(age);
+	document.querySelector('#age').innerHtml = age;
 
-	function splashScreenToggle () {
-		$('#banner').toggleClass('splashScreen');
-			$('.profilePic').toggleClass('splashScreen');
-			$('.profilePic').toggleClass('top');
-			$('.card').toggleClass('splashScreen');
-			$('.mailicon').toggleClass('splashScreen');
-			$('.splashPresentation').toggleClass('splashScreen');
-			$('.arrow').toggleClass('splashScreen');
-			isSplashed = !isSplashed;
-	}
+	splashScreenToggle = function() {
+		document.querySelector('#banner').classList.toggle('splashScreen');
+		document.querySelector('.profilePic').classList.toggle('splashScreen');
+		document.querySelector('.profilePic').classList.toggle('top');
+        var cards = document.querySelectorAll('.card');
+        for (var i = 0; i < cards.length; i++) {
+            cards[i].classList.toggle('splashScreen');
+        }
+		document.querySelector('.mailicon').classList.toggle('splashScreen');
+		document.querySelector('.splashPresentation').classList.toggle('splashScreen');
+		document.querySelector('.arrow').classList.toggle('splashScreen');
+		isSplashed = !isSplashed;
+        sectionMargin();
+	};
 
-	$(window).scroll(function() {
+	window.onscroll = function() {
 		if (isSplashed) {
 			splashScreenToggle();
-		};
-	});
-	$('.profilePic').click(function(){
+		}
+	};
+	document.querySelector('.profilePic').onclick = function(){
 		window.scrollTo(0, 0);
 		splashScreenToggle();
-	});
-	$('.arrow').click(function(){
+	};
+	document.querySelector('.arrow').onclick = function(){
 		splashScreenToggle();
-	});
-});
+	};
+};
