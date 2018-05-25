@@ -11,12 +11,6 @@ window.onload = function(){
 	document.querySelector('.profilePic.splashScreen').style.top = (window.innerHeight/2)-200+'px';
 	window.onresize = sectionMargin();
 
-    // age
-    var dob = new Date(1996,4,19);
-	var today = new Date();
-	var age = Math.floor((today-dob) / (365.25 * 24 * 60 * 60 * 1000));
-	document.querySelector('#age').innerHtml = age;
-
 	splashScreenToggle = function() {
 		document.querySelector('#banner').classList.toggle('splashScreen');
 		document.querySelector('.profilePic').classList.toggle('splashScreen');
